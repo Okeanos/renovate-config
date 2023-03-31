@@ -1,0 +1,26 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		":ignoreModulesAndTests",
+		":separateMultipleMajorReleases",
+		"group:allNonMajor",
+		"workarounds:doNotUpgradeFromAlpineStableToEdge"
+	],
+	"packageRules": [
+		{
+			"matchPackageNames": ["org.springframework.boot"],
+			"allowedVersions": "<3.0.0",
+			"matchCurrentVersion": "<3.0.0"
+		},
+		{
+			"matchPackageNames": ["org.slf4j"],
+			"allowedVersions": "<2.0.0",
+			"matchCurrentVersion": "<2.0.0"
+		},
+		{
+			"matchPackageNames": ["ch.qos.logback"],
+			"allowedVersions": "<1.3.0",
+			"matchCurrentVersion": "<1.3.0"
+		}
+	]
+}
