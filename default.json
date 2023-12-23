@@ -48,8 +48,8 @@
 			"matchStrings": [
 				"editorconfig-checker@(?<currentValue>[^\\s]+)"
 			],
-			"depNameTemplate": "github.com/editorconfig-checker/editorconfig-checker/cmd/editorconfig-checker",
-			"datasourceTemplate": "go"
+			"depNameTemplate": "github.com/editorconfig-checker/editorconfig-checker",
+			"datasourceTemplate": "github-tags"
 		},
 		{
 			"customType": "regex",
