@@ -48,7 +48,7 @@
 			"matchStrings": [
 				"editorconfig-checker@(?<currentValue>[^\\s]+)"
 			],
-			"depNameTemplate": "github.com/editorconfig-checker/editorconfig-checker",
+			"depNameTemplate": "editorconfig-checker/editorconfig-checker",
 			"datasourceTemplate": "github-tags"
 		},
 		{
@@ -59,8 +59,8 @@
 			"matchStrings": [
 				"butane_version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
 			],
-			"depNameTemplate": "github.com/coreos/butane",
-			"datasourceTemplate": "go"
+			"depNameTemplate": "coreos/butane",
+			"datasourceTemplate": "github-tags"
 		}
 	],
 	"packageRules": [
