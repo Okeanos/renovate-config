@@ -35,21 +35,31 @@
 				"workflows\/.*y[a]?ml$"
 			],
 			"matchStrings": [
-				"go-version: '(?<currentValue>[^']+)"
+				"go-version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
 			],
-			"depNameTemplate": "golang-version",
+			"depNameTemplate": "github.com/golang/go",
 			"datasourceTemplate": "golang-version"
 		},
 		{
 			"customType": "regex",
 			"fileMatch": [
-				"workflows\/.*y[a]?ml$",
-				"\\.github\/workflows\/.*y[a]?ml$"
+				"workflows\/.*y[a]?ml$"
 			],
 			"matchStrings": [
 				"editorconfig-checker@(?<currentValue>[^\\s]+)"
 			],
-			"depNameTemplate": "github.com/editorconfig-checker/editorconfig-checker",
+			"depNameTemplate": "github.com/editorconfig-checker/editorconfig-checker/cmd/editorconfig-checker",
+			"datasourceTemplate": "go"
+		},
+		{
+			"customType": "regex",
+			"fileMatch": [
+				"workflows\/.*y[a]?ml$"
+			],
+			"matchStrings": [
+				"butane_version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
+			],
+			"depNameTemplate": "github.com/coreos/butane",
 			"datasourceTemplate": "go"
 		}
 	],
