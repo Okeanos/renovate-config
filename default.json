@@ -46,7 +46,7 @@
 				"workflows\/.*y[a]?ml$"
 			],
 			"matchStrings": [
-				"editorconfig-checker@(?<currentValue>[^\\s]+)"
+				"editorconfig-checker/releases/download/(?<currentValue>[^/]+)"
 			],
 			"depNameTemplate": "editorconfig-checker/editorconfig-checker",
 			"datasourceTemplate": "github-tags"
