@@ -35,10 +35,10 @@
 				"workflows\/.*y[a]?ml$"
 			],
 			"matchStrings": [
-				"go-version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
+				"butane_version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
 			],
-			"depNameTemplate": "github.com/golang/go",
-			"datasourceTemplate": "golang-version"
+			"depNameTemplate": "coreos/butane",
+			"datasourceTemplate": "github-tags"
 		},
 		{
 			"customType": "regex",
@@ -57,10 +57,10 @@
 				"workflows\/.*y[a]?ml$"
 			],
 			"matchStrings": [
-				"butane_version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
+				"go-version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
 			],
-			"depNameTemplate": "coreos/butane",
-			"datasourceTemplate": "github-tags"
+			"depNameTemplate": "github.com/golang/go",
+			"datasourceTemplate": "golang-version"
 		}
 	],
 	"packageRules": [
