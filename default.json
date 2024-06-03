@@ -57,7 +57,7 @@
 				"workflows\/.*y[a]?ml$"
 			],
 			"matchStrings": [
-				"go-version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
+				"(\\W*|^)go-version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
 			],
 			"depNameTemplate": "github.com/golang/go",
 			"datasourceTemplate": "golang-version"
