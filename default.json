@@ -50,17 +50,6 @@
 			],
 			"depNameTemplate": "editorconfig-checker/editorconfig-checker",
 			"datasourceTemplate": "github-tags"
-		},
-		{
-			"customType": "regex",
-			"fileMatch": [
-				"workflows\/.*y[a]?ml$"
-			],
-			"matchStrings": [
-				"(\\W+|^)go-version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
-			],
-			"depNameTemplate": "github.com/golang/go",
-			"datasourceTemplate": "golang-version"
 		}
 	],
 	"packageRules": [
