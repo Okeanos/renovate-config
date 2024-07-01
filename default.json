@@ -73,6 +73,12 @@
 			"matchCurrentValue": "!/^([\\^~<=>v]+)?0\\./"
 		},
 		{
+			"groupName": "traefik",
+			"matchPackagePatterns": [
+				"^traefik"
+			]
+		},
+		{
 			"matchManagers": [
 				"docker-compose",
 				"dockerfile"
