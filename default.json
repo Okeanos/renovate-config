@@ -12,7 +12,8 @@
 		":ignoreModulesAndTests",
 		":enableVulnerabilityAlerts",
 		":rebaseStalePrs",
-		"workarounds:doNotUpgradeFromAlpineStableToEdge"
+		"workarounds:doNotUpgradeFromAlpineStableToEdge",
+		"workarounds:javaLTSVersions"
 	],
 	"recreateWhen": "auto",
 	"pruneStaleBranches": true,
