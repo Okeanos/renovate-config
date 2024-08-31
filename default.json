@@ -30,28 +30,6 @@
 		]
 	},
 	"customManagers": [
-		{
-			"customType": "regex",
-			"fileMatch": [
-				"workflows\/.*y[a]?ml$"
-			],
-			"matchStrings": [
-				"butane_version: [\"']?(?<currentValue>[^\"'\\s\\n]+)"
-			],
-			"depNameTemplate": "coreos/butane",
-			"datasourceTemplate": "github-tags"
-		},
-		{
-			"customType": "regex",
-			"fileMatch": [
-				"workflows\/.*y[a]?ml$"
-			],
-			"matchStrings": [
-				"editorconfig-checker/releases/download/(?<currentValue>[^/]+)"
-			],
-			"depNameTemplate": "editorconfig-checker/editorconfig-checker",
-			"datasourceTemplate": "github-tags"
-		}
 	],
 	"packageRules": [
 		{
