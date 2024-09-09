@@ -34,6 +34,28 @@
 		"dependencyDashboardApproval": true
 	},
 	"customManagers": [
+		{
+			"customType": "regex",
+			"fileMatch": [
+				"^.mise.toml$"
+			],
+			"matchStrings": [
+				"butane = \"(?<currentValue>[^\"'\\s\\n]+)"
+			],
+			"depNameTemplate": "coreos/butane",
+			"datasourceTemplate": "github-releases"
+		},
+		{
+			"customType": "regex",
+			"fileMatch": [
+				"^.mise.toml$"
+			],
+			"matchStrings": [
+				"taplo = \"(?<currentValue>[^\"'\\s\\n]+)"
+			],
+			"depNameTemplate": "tamasfe/taplo",
+			"datasourceTemplate": "github-releases"
+		}
 	],
 	"packageRules": [
 		{
