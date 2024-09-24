@@ -28,6 +28,10 @@ on:
         description: Run OpenTofu (Terraform/HCL/OpenTofu linter)
         default: false
         type: boolean
+      renovate:
+        description: Run renovate-config-validator
+        default: true
+        type: boolean
       shellcheck:
         description: Run shellcheck (shell script linter)
         default: true
@@ -100,6 +104,24 @@ jobs:
       - name: OpenTofu fmt
         id: fmt
         run: tofu fmt -check -diff -recursive
+  renovate:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.renovate || true }}
+    steps:
+      - name: Extract Tool Versions
+        id: tool-versions
+        run: |
+          node_version=$(grep -F 'node' .mise.toml | cut -d '=' -f2 | xargs)
+          echo "node_version=${node_version}" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.tool-versions.outputs.node_version }}
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Install Renovate
+        run: pnpm install
+      - name: Run Renovate Config Validator
+        run: npx --yes --package renovate -- renovate-config-validator --strict default.json5
   shellcheck:
     runs-on: ubuntu-latest
     if: ${{ inputs.shellcheck || true }}

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/package.json",
+	"name": "renvoate",
+	"version": "1.0.0",
+	"description": "Manage Renovate version",
+	"author": {
+		"name": "Nikolas Grottendieck",
+		"email": "git@nikolasgrottendieck.com",
+		"url": "https://nikolasgrottendieck.com"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=20"
+	},
+	"packageManager": "pnpm@9.11.0",
+	"dependencies": {
+		"renovate": "38.93.3"
+	}
+}
