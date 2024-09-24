@@ -128,7 +128,8 @@ jobs:
             configs={$(echo "${output}" | tail -n +3)}
             echo "${configs}" | jq --raw-output --sort-keys '.oldConfig' > old.json
             echo "${configs}" | jq --raw-output --sort-keys '.newConfig' > new.json
-            git diff --no-index --color=always -- old.json new.json
+            git diff --no-index --color=always --exit-code=0 -- old.json new.json
+            exit 1
           fi
   shellcheck:
     runs-on: ubuntu-latest
