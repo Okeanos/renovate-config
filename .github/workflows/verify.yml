@@ -125,6 +125,8 @@ jobs:
         run: |
           set +e
           validation_result=$(npx --yes --package renovate -- renovate-config-validator --strict default.json5)
+          # use negative check because we don't really no what other exit messages are besides
+          # 'WARN: Config migration necessary' as shown in the documentation
           if [[ $(echo -n "${validation_result}" | grep -cF "Config validated successfully") != 1 ]]; then
             configs={$(echo "${validation_result}" | tail -n +3)}
             echo "${configs}" | jq --raw-output --sort-keys '.oldConfig' > old.json
