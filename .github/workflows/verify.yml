@@ -108,6 +108,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.renovate || true }}
     steps:
+      - uses: actions/checkout@v4
       - name: Extract Tool Versions
         id: tool-versions
         run: |
