@@ -85,7 +85,7 @@
 			// minor & patch updates
 			"groupName": "all non-major dependencies (exclude 0.x.y)",
 			"groupSlug": "all-minor-patch-semver",
-			"matchPackageNames": [
+			"matchPackagePatterns": [
 				"*"
 			],
 			"matchUpdateTypes": [
