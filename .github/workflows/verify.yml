@@ -125,17 +125,12 @@ jobs:
         run: |
           set +e
           validation_result=$(npx --yes --package renovate -- renovate-config-validator --strict default.json5)
-          echo "generated output"
           if [[ $(echo -n "${validation_result}" | grep -cF "Config validated successfully") != 1 ]]; then
-            echo "found issue"
             configs={$(echo "${validation_result}" | tail -n +3)}
-            echo "extracted configs"
             echo "${configs}" | jq --raw-output --sort-keys '.oldConfig' > old.json
-            echo "wrote old config"
             echo "${configs}" | jq --raw-output --sort-keys '.newConfig' > new.json
-            echo "wrote new config"
-            git diff --no-index --color=always --exit-code=0 -- old.json new.json
-            echo "diffed stuff"
+            git diff --no-index --color=always -- old.json new.json
+            exit 1
           fi
   shellcheck:
     runs-on: ubuntu-latest
