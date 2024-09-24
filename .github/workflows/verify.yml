@@ -123,6 +123,8 @@ jobs:
         run: pnpm install
       - name: Run Renovate Config Validator
         run: |
+          set +e
+          set -x
           output=$(npx --yes --package renovate -- renovate-config-validator --strict default.json5)
           if [[ $(echo -n "${output}" | grep -cF "Config validated successfully") != 1 ]]; then
             configs={$(echo "${output}" | tail -n +3)}
