@@ -25,9 +25,8 @@
 		":enableVulnerabilityAlerts",
 		// keep PRs up to date with the target branch so PR builds always show up-to-date information
 		":rebaseStalePrs",
-		//
-		"workarounds:doNotUpgradeFromAlpineStableToEdge",
-		"workarounds:javaLTSVersions"
+		// Renovate maintained workarounds for versioning handling in specific cases
+		"workarounds:doNotUpgradeFromAlpineStableToEdge"
 	],
 	"recreateWhen": "auto", // Recreates only immortal PRs (default), https://docs.renovatebot.com/key-concepts/pull-requests/#immortal-prs
 	"pruneStaleBranches": true, // Delete orphan branches and autoclose PRs (if e.g. taken care of already by other means)
@@ -93,6 +92,39 @@
 				"patch"
 			],
 			"matchCurrentValue": "!/^([\\^~<=>v]+)?0\\./"
+		},
+		// Disable updates to Java by default because the major version is manually managed and up-to-date patch/minor versions are
+		// automatically used on build of the project
+		// data sources and package names from `workarounds:javaLTSVersions`
+		{
+			"matchDatasources": [
+				"docker",
+				"java-version"
+			],
+			"matchPackageNames": [
+				"eclipse-temurin",
+				"amazoncorretto",
+				"adoptopenjdk",
+				"openjdk",
+				"java",
+				"java-jre",
+				"sapmachine",
+				"/^azul/zulu-openjdk/",
+				"/^bellsoft/liberica-openj(dk|re)-/",
+				"/^cimg/openjdk/"
+			],
+			"enabled": false
+		},
+		// Disable updates to PHP by default because the major version is manually managed and up-to-date patch/minor versions are
+		// automatically used on build of the project
+		{
+			"matchDatasources": [
+				"docker",
+			],
+			"matchPackageNames": [
+				"php",
+			],
+			"enabled": false
 		},
 		// Add some additional labels to particular managers for easier grouping and filtering
 		{
