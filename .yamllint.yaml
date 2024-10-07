@@ -21,3 +21,5 @@ rules:
     level: warning
     # prevent e.g. URLs from triggering this warning
     allow-non-breakable-inline-mappings: true
+    ignore: |
+      pnpm-lock.yaml
