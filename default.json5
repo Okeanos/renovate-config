@@ -89,7 +89,7 @@
 				// Traefik Releases are in the format of x.y (usually) and they release betas/release candidates without a suffix so Renovate
 				// thinks it can group it together with everything else. This is wrong, because RCs aren't stable and shouldn't be used in
 				// production
-				"!containous/traefik"
+				"!traefik"
 			],
 			"matchUpdateTypes": [
 				"minor",
