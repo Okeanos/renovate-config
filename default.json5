@@ -56,7 +56,7 @@
 			// technically https://github.com/Okeanos/asdf-butane exists but isn't officially a mise/asdf repo so renovate won't know about it
 			"customType": "regex",
 			"fileMatch": [
-				"^.mise.toml$"
+				"^\\.mise\\.toml$"
 			],
 			"matchStrings": [
 				"butane = \"(?<currentValue>[^\"'\\s\\n]+)"
@@ -69,7 +69,7 @@
 			// technically https://github.com/Okeanos/asdf-taplo exists but isn't officially a mise/asdf repo so renovate won't know about it
 			"customType": "regex",
 			"fileMatch": [
-				"^.mise.toml$"
+				"^\\.mise\\.toml$"
 			],
 			"matchStrings": [
 				"taplo = \"(?<currentValue>[^\"'\\s\\n]+)"
