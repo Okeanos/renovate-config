@@ -71,7 +71,11 @@
 			"fileMatch": [
 				"^\\.mise\\.toml$"
 			],
+			// the string taplo appears 2 times in .mise.toml: once for plugins & once for tools
+			// we are only interested in the tools declaration because that contains the version number to increment
+			"matchStringsStrategy": "combination",
 			"matchStrings": [
+				"!/taplo = \"https[^\"'\\s\\n]+/",
 				"taplo = \"(?<currentValue>[^\"'\\s\\n]+)"
 			],
 			"depNameTemplate": "tamasfe/taplo",
