@@ -58,7 +58,11 @@
 			"fileMatch": [
 				"^\\.mise\\.toml$"
 			],
+			// the string butane appears 2 times in .mise.toml: once for plugins & once for tools
+			// we are only interested in the tools declaration because that contains the version number to increment
+			"matchStringsStrategy": "combination",
 			"matchStrings": [
+				"!/butane = \"https[^\"'\\s\\n]+/",
 				"butane = \"(?<currentValue>[^\"'\\s\\n]+)"
 			],
 			"depNameTemplate": "coreos/butane",
