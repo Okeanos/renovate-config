@@ -76,7 +76,44 @@
 			],
 			"depNameTemplate": "tamasfe/taplo",
 			"datasourceTemplate": "github-releases"
-		}
+		},
+		// custom managers for binaries in the verify.yml workflow
+		{
+			// custom managers for editor config
+			"customType": "regex",
+			"fileMatch": [
+				"^verify.ya?ml$"
+			],
+			"matchStrings": [
+				"EDITORCONFIG_VERSION: \"(?<currentValue>[^\"'\\s\\n]+)"
+			],
+			"depNameTemplate": "editorconfig-checker/editorconfig-checker",
+			"datasourceTemplate": "github-releases"
+		},
+		{
+			// custom managers for editor config
+			"customType": "regex",
+			"fileMatch": [
+				"^verify.ya?ml$"
+			],
+			"matchStrings": [
+				"GITLEAKS_VERSION: \"(?<currentValue>[^\"'\\s\\n]+)"
+			],
+			"depNameTemplate": "gitleaks/gitleaks",
+			"datasourceTemplate": "github-releases"
+		},
+		{
+			// custom managers for editor config
+			"customType": "regex",
+			"fileMatch": [
+				"^verify.ya?ml$"
+			],
+			"matchStrings": [
+				"TAPLO_VERSION: \"(?<currentValue>[^\"'\\s\\n]+)"
+			],
+			"depNameTemplate": "tamasfe/taplo",
+			"datasourceTemplate": "github-releases"
+		},
 	],
 	"packageRules": [
 		{
@@ -118,6 +155,16 @@
 				"/^cimg/openjdk/"
 			],
 			"enabled": false
+		},
+		{
+			// group the verify.yaml workflow findings into their own group because they require manual intervention (SHA sum fixes)
+			"groupName": "group updates requiring SHA sums",
+			"groupSlug": "require-shasum-updates",
+			"matchPackageNames": [
+				"editorconfig-checker/editorconfig-checker",
+				"gitleaks/gitleaks",
+				"tamasfe/taplo",
+			],
 		},
 		// Disable updates to PHP by default because the major version is manually managed and up-to-date patch/minor versions are
 		// automatically used on build of the project
