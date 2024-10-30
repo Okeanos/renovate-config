@@ -129,7 +129,7 @@
 		},
 		{
 			// group the asdf/mise findings into their own group because they require manual intervention (SHA sum fixes) in some places
-			"groupName": "group updates requiring SHA sums",
+			"groupName": "GH workflow tools requiring manual SHA sum updates",
 			"groupSlug": "require-shasum-updates",
 			"matchManagers": [
 				"asdf",
