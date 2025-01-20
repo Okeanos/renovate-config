@@ -49,6 +49,14 @@
 	"major": {
 		"dependencyDashboardApproval": true
 	},
+	// Run Mise Update script to update sha256sum checksums for GitHub Actions
+	"postUpgradeTasks": {
+		"commands": [
+			".github/mise-update"
+		],
+		"fileFilters": [".mise.toml"],
+		"executionMode": "branch"
+	},
 	// provide additional detection mechanisms for Renovate to manage dependencies
 	"customManagers": [
 		{
