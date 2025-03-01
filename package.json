@@ -12,8 +12,8 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"packageManager": "pnpm@10.4.0",
+	"packageManager": "pnpm@10.5.2",
 	"dependencies": {
-		"renovate": "39.134.0"
+		"renovate": "39.185.0"
 	}
 }
