@@ -105,10 +105,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ steps.tool-versions.outputs.node_version }}
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
       - name: Install Renovate
-        run: pnpm install
+        run: npm ci
       - name: Run Renovate Config Validator
         run: |
           set +e
