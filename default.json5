@@ -52,7 +52,7 @@
 	// Run Mise Update script to update sha256sum checksums for GitHub Actions
 	"postUpgradeTasks": {
 		"commands": [
-			".github/mise-update"
+			"mise-update"
 		],
 		"fileFilters": [".mise.toml"],
 		"executionMode": "branch"
