@@ -26,7 +26,9 @@
 		// keep PRs up to date with the target branch so PR builds always show up-to-date information
 		":rebaseStalePrs",
 		// Renovate maintained workarounds for versioning handling in specific cases
-		"workarounds:doNotUpgradeFromAlpineStableToEdge"
+		"workarounds:doNotUpgradeFromAlpineStableToEdge",
+		// Use Git SHA digests instead of arbitrary Git tags to refer to GitHub Action versions
+		"helpers:pinGitHubActionDigests"
 	],
 	"recreateWhen": "auto", // Recreates only immortal PRs (default), https://docs.renovatebot.com/key-concepts/pull-requests/#immortal-prs
 	"pruneStaleBranches": true, // Delete orphan branches and autoclose PRs (if e.g. taken care of already by other means)
