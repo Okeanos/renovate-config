@@ -59,6 +59,10 @@
 		"fileFilters": [".mise.toml"],
 		"executionMode": "branch"
 	},
+	// use lockFileMaintenance to refresh lock files to keep them up-to-date.
+	"lockFileMaintenance": {
+		"enabled": true,
+	},
 	// provide additional detection mechanisms for Renovate to manage dependencies
 	"customManagers": [
 		{
