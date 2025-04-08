@@ -142,17 +142,7 @@ jobs:
         run: npm ci
       - name: Run Renovate Config Validator
         run: |
-          set +e
-          validation_result=$(npx --yes --package renovate -- renovate-config-validator --strict default.json5)
-          # use negative check because we don't really no what other exit messages are besides
-          # 'WARN: Config migration necessary' as shown in the documentation
-          if [[ $(echo -n "${validation_result}" | grep -cF "Config validated successfully") != 1 ]]; then
-            configs={$(echo "${validation_result}" | tail -n +3)}
-            echo "${configs}" | jq --raw-output --sort-keys '.oldConfig' > old.json
-            echo "${configs}" | jq --raw-output --sort-keys '.newConfig' > new.json
-            git diff --no-index --color=always -- old.json new.json
-            exit 1
-          fi
+          npx --yes --package renovate -- renovate-config-validator --strict default.json5
   shellcheck:
     runs-on: ubuntu-latest
     if: ${{ inputs.shellcheck || true }}
