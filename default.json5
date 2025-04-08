@@ -70,8 +70,9 @@
 		// Must be the same schedule as:
 		// renovate-workflow/.github/workflows/renovate.yml AND/OR
 		// https://docs.renovatebot.com/configuration-options/#schedule
+		// using ["at any time"] because this job is governed at the Workflow level
 		"schedule": [
-			"5 4 1,15 * *"
+			"at any time"
 		],
 	},
 	// provide additional detection mechanisms for Renovate to manage dependencies
