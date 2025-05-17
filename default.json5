@@ -81,7 +81,7 @@
 			// custom manager for https://github.com/coreos/butane
 			// technically https://github.com/Okeanos/asdf-butane exists but isn't officially a mise/asdf repo so renovate won't know about it
 			"customType": "regex",
-			"fileMatch": [
+			"managerFilePatterns": [
 				"^\\.mise\\.toml$"
 			],
 			// the string butane appears 2 times in .mise.toml: once for plugins & once for tools
@@ -98,7 +98,7 @@
 			// custom manager for https://github.com/tamasfe/taplo
 			// technically https://github.com/Okeanos/asdf-taplo exists but isn't officially a mise/asdf repo so renovate won't know about it
 			"customType": "regex",
-			"fileMatch": [
+			"managerFilePatterns": [
 				"^\\.mise\\.toml$"
 			],
 			// the string taplo appears 2 times in .mise.toml: once for plugins & once for tools
