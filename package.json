@@ -10,9 +10,14 @@
 	},
 	"license": "MIT",
 	"engines": {
-		"node": ">=22"
+		"node": ">=22",
+		"pnpm": ">=10 <11"
 	},
-	"packageManager": "npm@10.9.4",
+	"packageManager": "pnpm@10.20.0",
+	"engineStrict": true,
+	"scripts": {
+		"preinstall": "npx only-allow pnpm"
+	},
 	"dependencies": {
 		"renovate": "41.168.3"
 	}
