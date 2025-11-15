@@ -13,7 +13,7 @@
 		"node": ">=22",
 		"pnpm": ">=10 <11"
 	},
-	"packageManager": "pnpm@10.20.0",
+	"packageManager": "pnpm@10.22.0",
 	"engineStrict": true,
 	"scripts": {
 		"preinstall": "npx only-allow pnpm"
