@@ -19,6 +19,6 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"renovate": "43.0.8"
+		"renovate": "43.4.4"
 	}
 }
