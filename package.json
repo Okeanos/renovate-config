@@ -19,6 +19,6 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"renovate": "43.102.3"
+		"renovate": "43.103.0"
 	}
 }
