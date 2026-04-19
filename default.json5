@@ -114,6 +114,10 @@
 	],
 	"packageRules": [
 		{
+			// Set a minimum age for releases before they are suggested by renovate in order to cut down on potential supply chain attacks
+			"minimumReleaseAge": "3 days",
+		},
+		{
 			// semver says "anything goes" for v0 updates - so they need to be handled like major versions and shouldn't be grouped with
 			// minor & patch updates
 			"groupName": "all non-major dependencies (exclude 0.x.y)",
