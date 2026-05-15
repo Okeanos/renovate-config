@@ -4,10 +4,4 @@ allowBuilds:
   protobufjs: false
   re2: true
 
-ignoredBuiltDependencies:
-  - better-sqlite3
-  - core-js-pure
-  - protobufjs
-
-onlyBuiltDependencies:
-  - re2
+dedupePeers: true
