@@ -5,3 +5,5 @@ allowBuilds:
   re2: true
 
 dedupePeers: true
+
+strictPeerDependencies: true
