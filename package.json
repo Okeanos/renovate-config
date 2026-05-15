@@ -11,9 +11,9 @@
 	"license": "MIT",
 	"engines": {
 		"node": ">=22",
-		"pnpm": ">=10 <11"
+		"pnpm": ">=11 <12"
 	},
-	"packageManager": "pnpm@10.33.2",
+	"packageManager": "pnpm@11.1.2",
 	"engineStrict": true,
 	"scripts": {
 		"preinstall": "npx only-allow pnpm"
