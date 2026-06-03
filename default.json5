@@ -102,11 +102,29 @@
 				"adoptopenjdk",
 				"openjdk",
 				"java",
+				"java-jdk",
 				"java-jre",
 				"sapmachine",
 				"/^azul/zulu-openjdk/",
 				"/^bellsoft/liberica-openj(dk|re)-/",
 				"/^cimg/openjdk/"
+			],
+			"enabled": false
+		},
+		{
+			"matchDatasources": [
+				"docker",
+				"java-version"
+			],
+			"matchDepNames": [
+				"eclipse-temurin",
+				"amazoncorretto",
+				"adoptopenjdk",
+				"openjdk",
+				"java",
+				"java-jdk",
+				"java-jre",
+				"sapmachine",
 			],
 			"enabled": false
 		},
