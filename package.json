@@ -13,12 +13,12 @@
 		"node": ">=22",
 		"pnpm": ">=11 <12"
 	},
-	"packageManager": "pnpm@11.5.0",
+	"packageManager": "pnpm@11.7.0",
 	"engineStrict": true,
 	"scripts": {
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"renovate": "43.206.1"
+		"renovate": "43.227.1"
 	}
 }
