@@ -7,7 +7,4 @@ allowBuilds:
 
 dedupePeers: true
 
-minimumReleaseAgeExclude:
-  - renovate@44.5.3
-
 strictPeerDependencies: true
