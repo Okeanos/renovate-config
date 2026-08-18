@@ -166,7 +166,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: DavidAnson/markdownlint-cli2-action@6bf21b07787794f89a243495939cd651942aeabe # v24.1.0
+      - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
   renovate:
     needs: is-valid-run
     if: ${{ ((inputs.renovate || true) == true) && (needs.is-valid-run.outputs.check == 'true') }}
@@ -178,7 +178,7 @@ jobs:
         run: |
           node_version=$(yq '.tools.node.version' .mise.toml)
           echo "node_version=${node_version}" >> "$GITHUB_OUTPUT"
-      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: ${{ steps.tool-versions.outputs.node_version }}
