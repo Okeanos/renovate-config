@@ -8,3 +8,5 @@ allowBuilds:
 dedupePeers: true
 
 strictPeerDependencies: true
+
+runtimeOnFail: download
