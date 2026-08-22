@@ -17,7 +17,7 @@
 		},
 		"packageManager": {
 			"name": "pnpm",
-			"version": "^11.0.0",
+			"version": "11.22.0",
 			"onFail": "error"
 		}
 	},
@@ -27,5 +27,6 @@
 	},
 	"dependencies": {
 		"renovate": "44.30.4"
-	}
+	},
+	"devDependencies": {}
 }
