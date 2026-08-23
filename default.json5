@@ -5,7 +5,7 @@
 	"extends": [
 		// See https://docs.renovatebot.com/presets-config/#configbest-practices
 		// the best practices contain digest pinning instead of relying on tags,
-		// config migrations for renovate where possible, minimum release ages etc.
+		// config migrations for Renovate where possible, minimum release ages etc.
 		"config:best-practices",
 		// explicitly upgrade to particular new major versions, don't hide them
 		":separateMajorReleases",
@@ -17,7 +17,7 @@
 		":prImmediately",
 		":prHourlyLimitNone",
 		":prConcurrentLimitNone",
-		// make PRs with semantic commit messages, depends on whether Renovate detects semantic commits to begin with
+		// Renovate should make PRs with semantic commit messages, depends on whether Renovate detects semantic commits to begin with
 		// see https://docs.renovatebot.com/semantic-commits/
 		":semanticCommits",
 		// use chore keyword for commits
@@ -57,11 +57,11 @@
 		"executionMode": "branch"
 	},
 	// Configure minimal release age for dependencies to give better protection against supply chain attacks.
-	// most attacks are either discovered very early or very late after a release; 3 days + time between renovate runs
+	// most attacks are either discovered very early or very late after a release; 3 days + time between Renovate runs
 	// should be a good measure
 	"minimumReleaseAge": "3 days",
-	// We don't always have an official timestamp available to verify release information, hence, we treat it (sadly) as
-	// optional
+	// We don't always have an official timestamp available to verify release information.
+	// Hence, we treat it (sadly) as optional
 	"minimumReleaseAgeBehaviour": "timestamp-optional",
 	// provide additional detection mechanisms for Renovate to manage dependencies
 	"customManagers": [
@@ -73,9 +73,9 @@
 			"groupName": "all non-major dependencies (exclude 0.x.y)",
 			"groupSlug": "all-minor-patch-semver",
 			"matchPackageNames": [
-				// Traefik Releases are in the format of x.y (usually) and they release betas/release candidates without a suffix so Renovate
-				// thinks it can group it together with everything else. This is wrong, because RCs aren't stable and shouldn't be used in
-				// production
+				// Traefik Releases are (usually) in the format of `x.y` and they release betas/release candidates without a suffix so
+				// Renovate thinks it can group it together with everything else. This is wrong because RCs aren't stable and shouldn't be
+				// used in production
 				"!traefik"
 			],
 			"matchUpdateTypes": [
