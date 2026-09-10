@@ -187,7 +187,7 @@ jobs:
           pnpm install --frozen-lockfile
       - name: Run Renovate Config Validator
         run: |
-          pnpm exec renovate-config-validator --strict default.json5
+          pnpm exec renovate-config-validator --strict --no-global default.json5
   shellcheck:
     needs: is-valid-run
     if: ${{ ((inputs.shellcheck || true) == true) && (needs.is-valid-run.outputs.check == 'true') }}
