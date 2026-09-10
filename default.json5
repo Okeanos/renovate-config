@@ -146,20 +146,16 @@
 		},
 		// Group Docker updates into a single PR when using digest-based updates (see `group:allDigest`)
 		{
-			"packageRules": [
-				{
-					"groupName": "all digest updates (Docker)",
-					"groupSlug": "all-digest-docker",
-					"matchPackageNames": [
-						"*"
-					],
-					"matchUpdateTypes": [
-						"digest"
-					],
-					"matchManagers": [
-						"docker"
-					]
-				}
+			"groupName": "all digest updates (Docker)",
+			"groupSlug": "all-digest-docker",
+			"matchPackageNames": [
+				"*"
+			],
+			"matchUpdateTypes": [
+				"digest"
+			],
+			"matchManagers": [
+				"docker"
 			]
 		}
 	]
