@@ -65,6 +65,10 @@
 	// We don't always have an official timestamp available to verify release information.
 	// Hence, we treat it (sadly) as optional
 	"minimumReleaseAgeBehaviour": "timestamp-optional",
+	// ensure lock files are updated when dependencies are updated, even if direct dependencies are not updated
+	"lockFileMaintenance": {
+		"enabled": true,
+	},
 	// provide additional detection mechanisms for Renovate to manage dependencies
 	"customManagers": [
 	],
