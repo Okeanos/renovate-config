@@ -17,7 +17,7 @@
 		},
 		"packageManager": {
 			"name": "pnpm",
-			"version": "12.16.1",
+			"version": "12.20.0",
 			"onFail": "error"
 		}
 	},
@@ -26,7 +26,7 @@
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
-		"renovate": "44.197.0"
+		"renovate": "44.235.3"
 	},
 	"devDependencies": {}
 }
